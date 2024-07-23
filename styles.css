@@ -1,91 +1,75 @@
 body {
+  font-family: "Arial", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+#calendar-app {
   background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
 }
 
-.calendar {
-  width: 400px;
+.selectors {
+  margin-bottom: 20px;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  border-bottom: 1px solid #000;
-  padding-bottom: 10px;
+#year-select,
+#month-select {
+  padding: 10px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
-.month-year {
-  display: flex;
-  align-items: center;
+#calendar {
+  display: inline-block;
+  width: 100%;
 }
 
-.month-year h1 {
-  font-size: 4em;
-  margin: 0;
-}
-
-.month-year h2 {
-  margin: 0 10px;
-  font-size: 1.5em;
-}
-
-.month-year p {
-  margin: 0;
-  font-size: 1em;
-}
-
-.mini-calendars {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  font-size: 0.8em;
-}
-
-.mini-calendar {
-  text-align: right;
-  margin-bottom: 5px;
-}
-
-.mini-calendar .dates {
+.calendar-header {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 2px;
+  gap: 5px;
+  margin-bottom: 10px;
 }
 
-main {
-  margin-top: 20px;
-}
-
-.weekdays {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
+.calendar-header div {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 0;
+  border-radius: 4px;
   font-weight: bold;
 }
 
-.dates {
+.calendar-body {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  row-gap: 10px;
+  gap: 5px;
 }
 
-span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  font-size: 1.2em;
+.calendar-day {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  text-align: center;
 }
 
-.sunday {
-  color: red;
+.calendar-day:hover {
+  background-color: #f1f1f1;
 }
 
-small {
-  font-size: 0.5em;
+.empty-day {
+  background-color: transparent;
+  border: none;
 }
